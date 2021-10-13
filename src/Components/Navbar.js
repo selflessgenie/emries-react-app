@@ -1,21 +1,4 @@
-// import { Component } from 'react';
-
-// class Navbar extends Component {
-
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-
-//     return "true";
-//   }
-
-// }
-
-// export default Navbar;
 import React from 'react';
-import { Container } from '@material-ui/core';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -24,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -43,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   search: {
     position: 'relative',
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1)",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -109,7 +92,7 @@ export default function PrimarySearchAppBar() {
   const menuId = 'primary-search-account-menu';
 
   return (
-    <Container className={classes.containerStyle} maxWidth="lg">
+    <div className={classes.containerStyle}>
       <div className={classes.grow}>
         <AppBar style={{fontFamily: 'Georgia, serif',
         fontStyle: 'italic',color: 'black', backgroundColor:'white', boxShadow: 'none'}} position="static">
@@ -151,6 +134,6 @@ export default function PrimarySearchAppBar() {
         
         
       </div>
-    </Container>
+    </div>
   );
 }

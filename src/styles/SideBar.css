@@ -1,0 +1,16 @@
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a.active {
+  border-right: 3px solid #04aa6d;
+  background: linear-gradient(90deg, rgb(238, 241, 238), rgb(212, 236, 213));
+  line-height: 1.5;
+}

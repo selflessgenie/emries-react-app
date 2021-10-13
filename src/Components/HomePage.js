@@ -1,5 +1,8 @@
 import { Component } from 'react';
+import { Container } from '@material-ui/core';
 import PrimarySearchAppBar from './Navbar';
+import Category from './Category';
+import MainContent from './MainContent';
 
 class HomePage extends Component {
 
@@ -9,7 +12,11 @@ class HomePage extends Component {
 
   render() {
     return(
-      <PrimarySearchAppBar/>
+      <Container maxWidth="lg">
+        <PrimarySearchAppBar/>
+        <Category/>
+        <MainContent/>
+      </Container>
     );
     
   }
